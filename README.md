@@ -70,6 +70,15 @@ create_presentation("产品介绍", "XX产品") # 创建 PPT
 | `add_text_to_slide` | 添加文本框 |
 | `set_slide_layout` | 设置布局 |
 
+### 支持的平台
+
+| 平台 | 配置文件位置 | 说明 |
+|------|-------------|------|
+| Claude Code | `~/.claude/settings.local.json` | Anthropic 官方 |
+| Cursor | `~/.cursor/mcp.json` | VS Code 分支，AI 功能强 |
+| VS Code (Insider) | `~/.cursor/mcp.json` | 需要 Insider 版本 |
+| OpenClaw | `~/.openclaw/mcp.json` | 开源 AI Agent 框架 |
+
 ### 快速开始
 
 #### 1. 安装依赖
@@ -85,7 +94,35 @@ pip install mcp python-docx openpyxl python-pptx
 export WPS_WORKSPACE="/path/to/your/folder"
 ```
 
-#### 3. 在 Claude Code 中使用
+#### 3. 配置 MCP Server
+
+**Claude Code** (`~/.claude/settings.local.json`)
+
+```json
+{
+  "mcpServers": {
+    "wps": {
+      "command": "python",
+      "args": ["/path/to/wps_mcp.py"]
+    }
+  }
+}
+```
+
+**Cursor / VS Code Insider** (`~/.cursor/mcp.json`)
+
+```json
+{
+  "mcpServers": {
+    "wps": {
+      "command": "python",
+      "args": ["C:\\path\\to\\wps_mcp.py"]
+    }
+  }
+}
+```
+
+**OpenClaw** (`~/.openclaw/mcp.json`)
 
 ```json
 {
