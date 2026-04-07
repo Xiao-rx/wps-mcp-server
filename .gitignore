@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+*.docx.bak
+*.xlsx.bak
+*.pptx.bak
+wps_projects/

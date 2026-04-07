@@ -1,0 +1,37 @@
+name: WPS MCP Server
+description: MCP Server for WPS Office - AI-native document, spreadsheet, and presentation creation
+owner: Xiao-rx
+homepage: https://github.com/Xiao-rx/wps-mcp-server
+verified: false
+license: MIT
+github: Xiao-rx/wps-mcp-server
+
+installs:
+  npm: npx -y @smithery/cli install wps-mcp-server
+  pypi: pip install wps-mcp-server
+
+tools:
+  - name: create_document
+    description: Create a new WPS Word document
+  - name: add_heading
+    description: Add heading to document
+  - name: add_paragraph
+    description: Add paragraph text
+  - name: read_document
+    description: Read document content
+  - name: create_spreadsheet
+    description: Create a new WPS Excel file
+  - name: write_cell
+    description: Write data to a cell
+  - name: read_cell
+    description: Read cell data
+  - name: add_formula
+    description: Add formula to cell
+  - name: create_presentation
+    description: Create a new WPS PowerPoint file
+  - name: add_slide
+    description: Add a new slide
+  - name: add_text_to_slide
+    description: Add text to slide
+  - name: set_slide_layout
+    description: Set slide layout
