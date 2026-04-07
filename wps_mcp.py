@@ -7,7 +7,6 @@ so this server works with both WPS and Microsoft Office files.
 
 import os
 from pathlib import Path
-from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
 
@@ -321,7 +320,7 @@ async def add_slide(filename: str, layout_index: int = 1) -> str:
     if layout_index >= len(prs.slide_layouts):
         layout_index = 1
 
-    slide = prs.slides.add_slide(prs.slide_layouts[layout_index])
+    prs.slides.add_slide(prs.slide_layouts[layout_index])
     prs.save(pptx_path)
 
     slide_num = len(prs.slides)
@@ -348,7 +347,7 @@ async def add_text_to_slide(
         Confirmation message
     """
     from pptx import Presentation
-    from pptx.util import Inches, Pt
+    from pptx.util import Inches
 
     pptx_path = os.path.join(WORKSPACE, f"{filename}.pptx")
 
